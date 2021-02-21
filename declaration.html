@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			window.onload = function(){
+				var internalHead = document.getElementById('internalHead');
+				internalHead.addEventListener('click',function(){alert('internal Head JS')})
+			}
+		</script>
+	</head>
+	<body>
+		<input type='button' id='external' value='external'>
+		<input type='button' id='internalHead' value='internalHead'>
+		<input type='button' id='internalBody' value='internalBody'>
+		<input type='button' onclick="alert('inline JS')" value='inline'>
+		<script src='./external.js'></script>
+		<script>
+			var internalBody = document.getElementById('internalBody');
+			internalBody.addEventListener('click',function(){alert('internal Body JS')})
+		</script>
+	</body>
+</html>
