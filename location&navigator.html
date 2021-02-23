@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>
+			Location
+		</h1>
+		<div>
+			<input type='button' value='href' onclick="location.href='https://www.google.com'">	
+			<input type='button' value='reload' onclick="location.reload()">
+		</div>
+		<script>
+			document.write('location : '+location.href+'<br>');
+			document.write('protocal : '+location.protocol+'<br>');
+			document.write('host : '+location.host+'<br>');
+			document.write('port : '+location.port+'<br>');
+			document.write('pathname : '+location.pathname+'<br>');
+			document.write('search : '+location.search+'<br>');
+		</script>
+		<h1>
+			Navigator	
+		</h1>
+		<script>
+			document.write('appName : '+navigator.appName+'<br>');
+			document.write('appVersion : '+navigator.appVersion+'<br>');
+			document.write('userAgent : '+navigator.userAgent+'<br>');
+			document.write('platform : '+navigator.platform+'<br>');
+		</script>
+	</body>
+</html>
