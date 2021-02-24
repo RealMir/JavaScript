@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>
+			Window Open
+		</h1>
+		<p>exist url</p>
+		<input type='button' value='open' onclick="window.open('https://www.google.com');">
+		<p>exist url, name</p>
+		<input type='button' value='open_self' onclick="window.open('https://www.google.com','_self');">
+		<p>exist url, name, windowFeatures</p>
+		<p>when name is specific name, Don't keep opening new window</p>
+		<input type='button' value='open_name' onclick="window.open('https://www.google.com','samename','width=200, height=200');">
+		<input type='button' value='new_win' onclick="win = window.open('https://www.google.com','samename','width=200,height=200');">
+		<input type='button' value='close' onclick="win.close();">
+	</body>
+</html>
