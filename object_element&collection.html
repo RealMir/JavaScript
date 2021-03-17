@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css";
+			a { text-decoration:none; }
+		</style>
+	</head>
+	<body>
+		<h1>
+			HTMLElement Object 
+		</h1>
+		If the object is single, each object has the same HTMLElement property.<br><br>
+		<li id='li'>What is li tag object? <button id='liObject' onclick="object('li',id)">click</button></li><br>
+		<a id='a' href="#">What is a tag object? </a><button id='aObject' onclick="object('a',id)">click</button><br><br>
+		<input id='input' type='text' placeholder="What is input tag object? ">&nbsp;<button id='inputObject' onclick="object('input',id)">click</button>
+		<h1>
+			HTMLCollection Object
+		</h1>
+		If the object is plural, the usage method is similar to array.<br><br>
+		<li class='lis'>class li element <button id='classObject' onclick="classObject('lis',id)">click</button></li>
+		<li class='lis'>tag li element <button id='tagObject' onclick="tagObject('li',id)">click</button></li>
+		<script>
+			function object(tag,id){
+				var tag = document.getElementById(tag);
+				document.getElementById(id).innerHTML = "<i class='fas fa-arrow-right'></i> "+tag.constructor.name;
+			}
+			function classObject(tag,id){
+				var tag = document.getElementsByClassName(tag);
+				document.getElementById(id).innerHTML = "<i class='fas fa-arrow-right'></i> "+tag.constructor.name;
+			}
+			function tagObject(tag,id){
+				var tag = document.getElementsByTagName(tag);
+				document.getElementById(id).innerHTML = "<i class='fas fa-arrow-right'></i> "+tag.constructor.name;
+			}
+		</script>
+	</body>
+</html>
